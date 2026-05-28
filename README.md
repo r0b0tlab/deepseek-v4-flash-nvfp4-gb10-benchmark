@@ -44,9 +44,17 @@ Pinning the commit lifted single-stream to ~38 tok/s — a **7.5× improvement**
 
 ## Reproduce
 
-See [`docs/REPRODUCE.md`](docs/REPRODUCE.md) for the full build + launch recipe,
-including the three build/launch fixes (CUDA-torch re-pin, env vars, container
-restart for port reuse).
+**Fastest path — pull the prebuilt image (no build needed):**
+```bash
+docker pull ghcr.io/r0b0tlab/vllm-dsv4-flash-gb10:cu130-sm121-arm64-dda4668b
+```
+Then see [`docs/REPRODUCE.md`](docs/REPRODUCE.md) — quick-start uses
+[`scripts/run-dsv4-gb10.sh`](scripts/run-dsv4-gb10.sh). You supply the 149GB
+model weights (Hugging Face `deepseek-ai/DeepSeek-V4-Flash`).
+
+Building from source is also documented in `docs/REPRODUCE.md`, including the
+three build/launch fixes (CUDA-torch re-pin, env vars, container restart for
+port reuse). AI agents reproducing this: read [`AGENTS.md`](AGENTS.md) first.
 
 ## Reference baseline
 
