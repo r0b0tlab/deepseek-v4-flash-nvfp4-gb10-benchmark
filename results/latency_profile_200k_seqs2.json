@@ -1,0 +1,172 @@
+{
+  "ts": "2026-05-28T21:03:12.793796+00:00",
+  "max_tokens": 256,
+  "runs": 3,
+  "model": "deepseek-v4-flash",
+  "results": [
+    {
+      "concurrency": 1,
+      "runs": [
+        {
+          "run": 0,
+          "ok": true,
+          "agg_tps": 38.53468199825748,
+          "per_req_median_tps": 38.53719219989088,
+          "total_out": 256,
+          "wall": 6.643366098403931,
+          "n_ok": 1
+        },
+        {
+          "run": 1,
+          "ok": true,
+          "agg_tps": 37.240810190009526,
+          "per_req_median_tps": 37.24300609173618,
+          "total_out": 256,
+          "wall": 6.874179124832153,
+          "n_ok": 1
+        },
+        {
+          "run": 2,
+          "ok": true,
+          "agg_tps": 38.356960829555476,
+          "per_req_median_tps": 38.3590888904838,
+          "total_out": 256,
+          "wall": 6.674147129058838,
+          "n_ok": 1
+        }
+      ],
+      "summary": {
+        "concurrency": 1,
+        "agg_tps_median": 38.356960829555476,
+        "agg_tps_min": 37.240810190009526,
+        "agg_tps_max": 38.53468199825748,
+        "per_req_tps_median": 38.3590888904838,
+        "runs_ok": 3,
+        "runs_total": 3
+      }
+    },
+    {
+      "concurrency": 2,
+      "runs": [
+        {
+          "run": 0,
+          "ok": true,
+          "agg_tps": 49.14352983488083,
+          "per_req_median_tps": 25.100222574062457,
+          "total_out": 512,
+          "wall": 10.418462038040161,
+          "n_ok": 2
+        },
+        {
+          "run": 1,
+          "ok": true,
+          "agg_tps": 54.703547387120885,
+          "per_req_median_tps": 28.368034144472873,
+          "total_out": 512,
+          "wall": 9.359539270401001,
+          "n_ok": 2
+        },
+        {
+          "run": 2,
+          "ok": true,
+          "agg_tps": 53.58864216576123,
+          "per_req_median_tps": 27.98516776998617,
+          "total_out": 512,
+          "wall": 9.554263353347778,
+          "n_ok": 2
+        }
+      ],
+      "summary": {
+        "concurrency": 2,
+        "agg_tps_median": 53.58864216576123,
+        "agg_tps_min": 49.14352983488083,
+        "agg_tps_max": 54.703547387120885,
+        "per_req_tps_median": 27.98516776998617,
+        "runs_ok": 3,
+        "runs_total": 3
+      }
+    },
+    {
+      "concurrency": 4,
+      "runs": [
+        {
+          "run": 0,
+          "ok": true,
+          "agg_tps": 54.030632821905705,
+          "per_req_median_tps": 21.429331762834295,
+          "total_out": 1024,
+          "wall": 18.95221185684204,
+          "n_ok": 4
+        },
+        {
+          "run": 1,
+          "ok": true,
+          "agg_tps": 54.24893384560547,
+          "per_req_median_tps": 20.735927473586106,
+          "total_out": 1024,
+          "wall": 18.87594699859619,
+          "n_ok": 4
+        },
+        {
+          "run": 2,
+          "ok": true,
+          "agg_tps": 45.70345351599574,
+          "per_req_median_tps": 20.34848065128724,
+          "total_out": 823,
+          "wall": 18.007391929626465,
+          "n_ok": 4
+        }
+      ],
+      "summary": {
+        "concurrency": 4,
+        "agg_tps_median": 54.030632821905705,
+        "agg_tps_min": 45.70345351599574,
+        "agg_tps_max": 54.24893384560547,
+        "per_req_tps_median": 20.735927473586106,
+        "runs_ok": 3,
+        "runs_total": 3
+      }
+    },
+    {
+      "concurrency": 8,
+      "runs": [
+        {
+          "run": 0,
+          "ok": true,
+          "agg_tps": 50.64119882532979,
+          "per_req_median_tps": 11.65834895008454,
+          "total_out": 1929,
+          "wall": 38.09151530265808,
+          "n_ok": 8
+        },
+        {
+          "run": 1,
+          "ok": true,
+          "agg_tps": 54.67863736920957,
+          "per_req_median_tps": 11.258393948772461,
+          "total_out": 2048,
+          "wall": 37.45521283149719,
+          "n_ok": 8
+        },
+        {
+          "run": 2,
+          "ok": true,
+          "agg_tps": 54.72532887119794,
+          "per_req_median_tps": 12.402048675741735,
+          "total_out": 1931,
+          "wall": 35.285306453704834,
+          "n_ok": 8
+        }
+      ],
+      "summary": {
+        "concurrency": 8,
+        "agg_tps_median": 54.67863736920957,
+        "agg_tps_min": 50.64119882532979,
+        "agg_tps_max": 54.72532887119794,
+        "per_req_tps_median": 11.65834895008454,
+        "runs_ok": 3,
+        "runs_total": 3
+      }
+    }
+  ]
+}
