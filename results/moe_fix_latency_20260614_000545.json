@@ -1,0 +1,90 @@
+{
+  "ts": "2026-06-14T05:05:45.818417+00:00",
+  "max_tokens": 256,
+  "runs": 3,
+  "model": "deepseek-v4-flash",
+  "results": [
+    {
+      "concurrency": 1,
+      "runs": [
+        {
+          "run": 0,
+          "ok": true,
+          "agg_tps": 11.10606691690287,
+          "per_req_median_tps": 11.106270017361702,
+          "total_out": 256,
+          "wall": 23.050464391708374,
+          "n_ok": 1
+        },
+        {
+          "run": 1,
+          "ok": true,
+          "agg_tps": 11.006116167106825,
+          "per_req_median_tps": 11.006373279366585,
+          "total_out": 256,
+          "wall": 23.25979447364807,
+          "n_ok": 1
+        },
+        {
+          "run": 2,
+          "ok": true,
+          "agg_tps": 10.979101980432397,
+          "per_req_median_tps": 10.979403300598904,
+          "total_out": 256,
+          "wall": 23.317025423049927,
+          "n_ok": 1
+        }
+      ],
+      "summary": {
+        "concurrency": 1,
+        "agg_tps_median": 11.006116167106825,
+        "agg_tps_min": 10.979101980432397,
+        "agg_tps_max": 11.10606691690287,
+        "per_req_tps_median": 11.006373279366585,
+        "runs_ok": 3,
+        "runs_total": 3
+      }
+    },
+    {
+      "concurrency": 2,
+      "runs": [
+        {
+          "run": 0,
+          "ok": true,
+          "agg_tps": 17.4352637165624,
+          "per_req_median_tps": 9.116807709389189,
+          "total_out": 512,
+          "wall": 29.36577320098877,
+          "n_ok": 2
+        },
+        {
+          "run": 1,
+          "ok": true,
+          "agg_tps": 17.579051328282006,
+          "per_req_median_tps": 9.18848994132831,
+          "total_out": 512,
+          "wall": 29.12557625770569,
+          "n_ok": 2
+        },
+        {
+          "run": 2,
+          "ok": true,
+          "agg_tps": 18.081378357293385,
+          "per_req_median_tps": 9.115514257834704,
+          "total_out": 512,
+          "wall": 28.316425323486328,
+          "n_ok": 2
+        }
+      ],
+      "summary": {
+        "concurrency": 2,
+        "agg_tps_median": 17.579051328282006,
+        "agg_tps_min": 17.4352637165624,
+        "agg_tps_max": 18.081378357293385,
+        "per_req_tps_median": 9.116807709389189,
+        "runs_ok": 3,
+        "runs_total": 3
+      }
+    }
+  ]
+}
