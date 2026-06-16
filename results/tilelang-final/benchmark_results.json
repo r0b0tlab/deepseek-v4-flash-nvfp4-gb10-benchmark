@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-15T19:45:24.234743",
+  "approach": "TileLang via PR #41834 (f32247a5) \u2014 full C++ rebuild",
+  "driver": "580.159.03",
+  "kernel": "6.17.0-1021-nvidia",
+  "mods": [
+    "fix-starlette",
+    "moe-padding-fix"
+  ],
+  "config": {
+    "tp": 2,
+    "ep": true,
+    "mtp": 2,
+    "max_model_len": 32768,
+    "max_num_seqs": 4,
+    "gpu_mem_util": 0.85,
+    "cudagraph_mode": "PIECEWISE",
+    "kv_cache": "fp8",
+    "backend": "mp",
+    "block_size": 256,
+    "max_num_batched_tokens": 4096
+  },
+  "baseline_before": {
+    "approach": "DeepGEMM patched SM121 (dda4668b)",
+    "c1_per_req_tok_s": 11.32,
+    "c2_agg_tok_s": 17.2,
+    "c4_agg_tok_s": 19.47,
+    "c8_agg_tok_s": 15.88,
+    "c16_agg_tok_s": 26.55
+  },
+  "tilelang_results": {
+    "c1": {
+      "per_req_median_tps": 27.3,
+      "agg_tps": 81.1,
+      "sr": 1.0,
+      "num_prompts": 4
+    },
+    "c2": {
+      "per_req_median_tps": 24.3,
+      "agg_tps": 157.7,
+      "sr": 1.0,
+      "num_prompts": 8
+    },
+    "c4": {
+      "per_req_median_tps": 16.5,
+      "agg_tps": 182.1,
+      "sr": 1.0,
+      "num_prompts": 16
+    },
+    "c8": {
+      "per_req_median_tps": 9.2,
+      "agg_tps": 212.4,
+      "sr": 1.0,
+      "num_prompts": 32
+    }
+  },
+  "improvement": {
+    "c1_per_req": "2.41x (11.32 -> 27.3 tok/s)",
+    "c8_agg": "13.4x (15.88 -> 212.4 tok/s)"
+  },
+  "correctness": "PASS (17*19=323)",
+  "tilelang_kernels": [
+    "hc_head_fuse_tilelang",
+    "mhc_pre_big_fuse_with_norm_tilelang",
+    "mhc_fused_tilelang"
+  ]
+}
